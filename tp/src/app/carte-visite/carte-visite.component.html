@@ -1,0 +1,18 @@
+<div *ngFor="let user of users" [hidden]="hidden">
+  <div *ngIf="user.id % 2 === 0" class="background">
+    <div class="card-header">
+      {{ user.company.name }}
+      <div class="card">
+        <div class="name">
+          {{ user.name }}
+        </div>
+        <div class="info">
+          <p>Site : {{ user.website }}</p>
+          <p>Email : {{ user.email }}</p>
+          <p>Phone : {{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button (click)="onClick()">Tout cacher</button>
